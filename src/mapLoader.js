@@ -32,14 +32,13 @@ async function loadMap() {
           gid: decalTile.gid,
         });
       } else {
-        decalRow.push(undefined);   // SOS to layer decal opou den exei dentra einai keno(diladi to perisotero meros tou)!
+        decalRow.push(undefined); // SOS to layer decal opou den exei dentra einai keno(diladi to perisotero meros tou)!
         //kai uparxei problem ama den tou pw opou keno vale null.
       }
     }
     ground2D.push(groundRow);
     decal2D.push(decalRow);
   }
-
 
   return {
     ground2D,

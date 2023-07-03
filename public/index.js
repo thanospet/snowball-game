@@ -1,4 +1,3 @@
-//UI file??? kapws...sthn arxh anapoda ta eipe
 const mapImage = new Image();
 mapImage.src = "snowy-sheet.png";
 
@@ -10,16 +9,14 @@ microphoneImage.src = "microphone.png";
 
 const walkSnow = new Audio("walk-snow.mp3");
 
-//otan kanw game me Js na xrisimopoiw <canvas> sthn html!
 const canvasEl = document.getElementById("canvas");
 canvasEl.width = window.innerWidth;
 canvasEl.height = window.innerHeight;
-//gia na mporw na zwgrafisw ousiastika panw sto canvas prepei prwta na kanw get context
 const canvas = canvasEl.getContext("2d");
 
 const socket = io(`ws://localhost:5000`);
 
-//AGORA____________________________________________________________________
+//AGORA
 const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 
 const localTracks = {
@@ -27,7 +24,7 @@ const localTracks = {
 };
 
 let isPlaying = true;
-let undecided = true; // an einai false exei omada / allios den kouniete h na kanei spanw mesa se dentra ?
+let undecided = true;
 
 const remoteUsers = {};
 const muteButton = document.getElementById("mute");
@@ -144,7 +141,7 @@ socket.on("snowballs", (serverSnowballs) => {
   snowballs = serverSnowballs;
 });
 
-//keep track of our inputs to walk!
+//keep track of our inputs to walk
 
 const inputs = {
   up: false,

@@ -194,7 +194,7 @@ async function main() {
     socket.on("teamOne", (teamId, color) => {
       const player = players.find((player) => player.id === socket.id); //find the player
       player.teamId = teamId;
-      player.color = color;//hard coded thn timh den thn pernei nomizw thelei emit apo brosta
+      player.color = color; //hard coded thn timh den thn pernei nomizw thelei emit apo brosta
       console.log(player.teamId);
     });
 
@@ -228,7 +228,7 @@ async function main() {
     });
 
     socket.on("disconnect", () => {
-      players = players.filter((player) => player.id !== socket.id); //kaliyera splice, alla exoume ligous paiktes
+      players = players.filter((player) => player.id !== socket.id); //better use splice, but we have a small number of players
     });
   });
 
